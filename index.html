@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Joshin K Saju — Full-Stack Developer & ML Engineer</title>
+  <meta name="description" content="Portfolio of Joshin K Saju — full-stack web developer, machine learning engineer, and UI/UX designer." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- ============ BACKGROUND ORB (edit image in assets/hero-orb.jpg) ============ -->
+  <div class="bg-glow"></div>
+  <div class="bg-orb" style="background-image: url('assets/hero-orb.jpg');"></div>
+  <div class="shimmer-line"></div>
+
+  <!-- ============ TOP NAV ============ -->
+  <header class="topbar">
+    <div class="topbar-inner">
+      <span>EST. 2003</span>
+      <nav>
+        <a href="#about">/ABOUT</a>
+        <a href="#work">/WORK</a>
+        <a href="#writing">/THOUGHTS</a>
+        <a href="#contact">/CONTACT</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- ============ HERO ============ -->
+    <section id="about" class="reveal">
+      <div class="avatar-wrap">
+        <div class="avatar-glow"></div>
+        <!-- Replace this image with your own photo: assets/avatar.jpg -->
+        <img class="avatar" src="./assets/avatar.png" alt="Profile photo" />
+      </div>
+
+      <h1 class="name">
+        Joshin K Saju
+        <span class="verified">✓</span>
+      </h1>
+      <p class="role">Full-Stack Developer / ML Engineer</p>
+
+      <p class="intro">
+        Been making things on the internet for a few years now. From student
+        hackathon builds to production landing pages to CNN models with
+        <span class="hl">95%+ accuracy</span>. Right now I'm a final-year
+        B.Tech IT student building at the seam of
+        <span class="gradient-text">web &amp; intelligence</span>.
+        Welcome to my corner of the <em>Internet</em>.
+      </p>
+
+      <button id="copyBtn" class="copy-cta">
+        Press <kbd id="copyKbd">C</kbd> <span id="copyLabel">to copy my email</span>
+      </button>
+    </section>
+
+    <!-- ============ EXPERIENCE ============ -->
+    <section id="work" class="section reveal">
+      <div class="tag">EXPERIENCE</div>
+      <p class="lede">Throughout my career, I've worked on a lot of projects. Here's a brief overview.</p>
+
+      <div class="exp-list">
+        <!-- Duplicate a .exp-item block to add another role -->
+        <div class="exp-item">
+          <div class="exp-period">MAY 2025 – JUL 2025</div>
+          <div>
+            <div class="exp-role">
+              <strong>Front-End Designer & Web Developer</strong>
+              <span class="muted">at</span>
+              <span class="chip"><span class="chip-dot"></span>SK Info Techies</span>
+            </div>
+            <p class="exp-blurb">Designed and developed 5+ responsive landing pages using HTML, CSS, JavaScript, Bootstrap, and Tailwind CSS, enhancing user engagement.</p>
+          </div>
+        </div>
+
+        <div class="exp-item">
+          <div class="exp-period">JUN 2024</div>
+          <div>
+            <div class="exp-role">
+              <strong>Python App Developer & UI/UX Designer</strong>
+              <span class="muted">at</span>
+              <span class="chip"><span class="chip-dot"></span>OneThe416 Technologies</span>
+            </div>
+            <p class="exp-blurb">Engineered a desktop GUI application using Tkinter and CustomTkinter with seamless frontend-backend integration.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ STUFF I DO ============ -->
+    <section class="section reveal">
+      <div class="tag">STUFF I DO</div>
+      <p class="stuff">Web Apps, ML Models, Landing Pages, Desktop GUIs, UI/UX Design, Research, And More.</p>
+    </section>
+
+    <!-- ============ PROJECTS / VENTURES ============ -->
+    <section class="section reveal">
+      <div class="tag">STACK</div>
+      <p class="lede">Ventures</p>
+
+      <div class="stack-list">
+        <!-- Duplicate an <a class="stack-card"> to add another project -->
+        <a class="stack-card" href="#">
+          <span class="stack-glow"></span>
+          <div class="stack-badge">RE</div>
+          <div class="stack-body">
+            <div class="stack-title">Automated Multi-Class Skin Disease Detection <span class="arr">↗</span></div>
+            <p class="stack-desc">Deep learning framework classifying 7 categories of skin lesions from the HAM10000 dataset — 89% accuracy, 99% melanoma recall.</p>
+          </div>
+        </a>
+
+        <a class="stack-card" href="#">
+          <span class="stack-glow"></span>
+          <div class="stack-badge">ML</div>
+          <div class="stack-body">
+            <div class="stack-title">CNN Based Diabetic Foot Ulcer Detection <span class="arr">↗</span></div>
+            <p class="stack-desc">CNN model detecting diabetic foot ulcers from medical images at 95% classification accuracy.</p>
+          </div>
+        </a>
+
+        <a class="stack-card" href="#">
+          <span class="stack-glow"></span>
+          <div class="stack-badge">AI</div>
+          <div class="stack-body">
+            <div class="stack-title">Desktop Voice Assistant <span class="arr">↗</span></div>
+            <p class="stack-desc">Desktop assistant with voice/text commands, TTS, speech recognition, SQLite, and OpenAI-powered NLP.</p>
+          </div>
+        </a>
+      </div>
+    </section>
+
+    <!-- ============ TECH STACK ============ -->
+    <section class="section reveal">
+      <div class="tag">TECH STACK</div>
+      <p class="lede">Tools & technologies I build with.</p>
+
+      <div class="tech-grid">
+        <!-- Duplicate a .tech-icon block to add another tool. Icons via cdn.simpleicons.org/<slug>/<hexcolor> -->
+        <div class="tech-icon" title="HTML5"><img src="https://cdn.simpleicons.org/html5/E34F26" alt="HTML5" /></div>
+        <div class="tech-icon" title="CSS3"><img src="https://cdn.simpleicons.org/css3/1572B6" alt="CSS3" /></div>
+        <div class="tech-icon" title="JavaScript"><img src="https://cdn.simpleicons.org/javascript/F7DF1E" alt="JavaScript" /></div>
+        <div class="tech-icon" title="Python"><img src="https://cdn.simpleicons.org/python/3776AB" alt="Python" /></div>
+        <div class="tech-icon" title="TensorFlow"><img src="https://cdn.simpleicons.org/tensorflow/FF6F00" alt="TensorFlow" /></div>
+        <div class="tech-icon" title="Figma"><img src="https://cdn.simpleicons.org/figma/F24E1E" alt="Figma" /></div>
+        <div class="tech-icon" title="Tailwind CSS"><img src="https://cdn.simpleicons.org/tailwindcss/38BDF8" alt="Tailwind CSS" /></div>
+        <div class="tech-icon" title="Bootstrap"><img src="https://cdn.simpleicons.org/bootstrap/7952B3" alt="Bootstrap" /></div>
+        <div class="tech-icon" title="GitHub"><img src="https://cdn.simpleicons.org/github/FFFFFF" alt="GitHub" /></div>
+      </div>
+    </section>
+
+    <!-- ============ PUBLICATION ============ -->
+    <section class="section reveal">
+      <div class="tag">PUBLICATION</div>
+      <p class="lede">Peer-reviewed research.</p>
+      <a class="pub-card" href="https://ieeexplore.ieee.org/document/11465623/" target="_blank" rel="noreferrer">
+        <div class="pub-glow"></div>
+        <div class="pub-title">A Deep Learning Framework for Automated Multi-Class Skin Disease Detection Using Dermoscopic Images <span class="arr">↗</span></div>
+        <div class="pub-meta">5th International Conference on Innovative Practices in Technology and Management (ICIPTM), 2026</div>
+        <div class="pub-tags">
+          <span class="pub-tag">89% classification accuracy</span>
+          <span class="pub-tag">99% melanoma recall</span>
+          <span class="pub-tag">CNN + metadata fusion</span>
+        </div>
+      </a>
+    </section>
+
+    <!-- ============ WRITING ============ -->
+    <section id="writing" class="section reveal">
+      <div class="tag">WRITING</div>
+      <div class="write-list">
+        <a class="write-item" href="https://medium.com/@joshinwrites/using-parkinsons-law-to-master-computer-science-engineering-da9664ff11c6" target="_blank" rel="noreferrer">
+          <span class="write-date">30/12/25</span>
+          <span class="write-title">Using Parkinson's Law to Master Computer Science Engineering</span>
+          <span class="write-len">3 m</span>
+        </a>
+        <a class="write-item" href="https://medium.com/@joshinwrites/harnessing-the-dunning-kruger-effect-to-become-a-better-computer-science-engineer-6957a6a3c6c2" target="_blank" rel="noreferrer">
+          <span class="write-date">02/01/26</span>
+          <span class="write-title">Harnessing the Dunning-Kruger Effect to Become a Better Computer Science Engineer</span>
+          <span class="write-len">3 m</span>
+        </a>
+        <a class="write-item" href="https://medium.com/@joshinwrites/how-to-make-2026-the-worst-year-of-your-life-07f2aa705af8" target="_blank" rel="noreferrer">
+          <span class="write-date">07/01/26</span>
+          <span class="write-title">How to Make 2026 the Worst Year of Your Life</span>
+          <span class="write-len">5 m</span>
+        </a>
+      </div>
+    </section>
+
+    <!-- ============ PERSONAL ============ -->
+    <section class="section reveal">
+      <div class="tag">PERSONAL</div>
+      <p class="lede">
+        In my spare time, I enjoy reading research papers, tinkering with side
+        projects, and exploring new ML architectures. Also a fan of clean UI,
+        good coffee, and long walks that turn into debugging sessions.
+      </p>
+      <div class="photo-grid">
+        <!-- Swap these images by replacing files in /assets -->
+        <div class="photo"><img src="assets/personal-1.jpg" alt="Code editor" /></div>
+        <div class="photo"><img src="assets/personal-2.jpg" alt="Desk setup" /></div>
+      </div>
+    </section>
+
+    <!-- ============ CONTACT ============ -->
+    <section id="contact" class="section reveal">
+      <div class="tag">CONTACT</div>
+      <p class="lede">fastest way is to email me. keep it short, don't write me an essay.</p>
+
+      <button id="emailBtn" class="email-btn">
+        <span class="email-glow"></span>
+        <span id="emailText">joshinkoshys@gmail.com</span>
+        <span id="emailIcon">📋</span>
+      </button>
+
+      <p class="lede" style="margin-top:2.5rem;">also where else are you online?</p>
+      <div class="socials">
+        <a class="social" href="https://github.com/Joshinx17" target="_blank" rel="noreferrer">GitHub ↗</a>
+        <a class="social" href="https://linkedin.com/in/joshinsaju/" target="_blank" rel="noreferrer">LinkedIn ↗</a>
+      </div>
+
+      <p class="lede" style="margin-top:2.5rem;">
+        just say hi. always down to chat, swap ideas, or hear what you're building.
+      </p>
+    </section>
+
+    <footer>
+      <span>© <span id="year"></span> JOSHIN K SAJU</span>
+      <span>MADE WITH CARE</span>
+    </footer>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
