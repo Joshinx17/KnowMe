@@ -2,7 +2,7 @@
 
 A dark, minimal personal portfolio site built with plain HTML, CSS, and JavaScript — no frameworks, no build step, no dependencies to install. Open `index.html` and it just works.
 
-**Live site:** _add your deployed URL here_
+**Live site:** _joshinx17.github.io/KnowMe/_
 
 ---
 
