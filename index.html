@@ -11,6 +11,9 @@
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
+  <!-- ============ STARFIELD (twinkling dots, added by script.js) ============ -->
+  <canvas id="starfield" aria-hidden="true"></canvas>
+
   <!-- ============ BACKGROUND ORB (edit image in assets/hero-orb.jpg) ============ -->
   <div class="bg-glow"></div>
   <div class="bg-orb" style="background-image: url('assets/hero-orb.jpg');"></div>
@@ -19,19 +22,25 @@
   <!-- ============ TOP NAV ============ -->
   <header class="topbar">
     <div class="topbar-inner">
-      <span>EST. 2003</span>
-      <nav>
-        <a href="#about">/ABOUT</a>
-        <a href="#work">/WORK</a>
-        <a href="#writing">/THOUGHTS</a>
-        <a href="#contact">/CONTACT</a>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <nav id="siteNav">
+        <a href="#about">ABOUT</a>
+        <a href="#experience">WORK</a>
+        <a href="#skills">SKILLS</a>
+        <a href="#projects">PROJECTS</a>
+        <a href="#publication">PUB</a>
+        <a href="#blogs">BLOGS</a>
+        <a href="#contact">CONTACT</a>
       </nav>
     </div>
+    <div class="nav-backdrop" id="navBackdrop"></div>
   </header>
 
   <main>
-    <!-- ============ HERO ============ -->
-    <section id="about" class="reveal">
+    <!-- ============ SECTION 1: HERO ============ -->
+    <section id="hero" class="reveal">
       <div class="avatar-wrap">
         <div class="avatar-glow"></div>
         <!-- Replace this image with your own photo: assets/avatar.jpg -->
@@ -39,18 +48,17 @@
       </div>
 
       <h1 class="name">
-        Joshin K Saju
+        <span id="glitchName">Joshin K Saju</span>
         <span class="verified">✓</span>
       </h1>
-      <p class="role">Full-Stack Developer / ML Engineer</p>
+      <p class="role"><span id="glitchRole">Full-Stack Developer / ML Engineer</span></p>
 
       <p class="intro">
-        Been making things on the internet for a few years now. From student
-        hackathon builds to production landing pages to CNN models with
-        <span class="hl">95%+ accuracy</span>. Right now I'm a final-year
-        B.Tech IT student building at the seam of
-        <span class="gradient-text">web &amp; intelligence</span>.
-        Welcome to my corner of the <em>Internet</em>.
+        Final-year B.Tech IT student building at the seam of
+        <span class="gradient-text">web &amp; intelligence</span> —
+        from production landing pages to CNN models with
+        <span class="hl">95%+ accuracy</span>. Welcome to my corner of the
+        <em>Internet</em>.
       </p>
 
       <button id="copyBtn" class="copy-cta">
@@ -58,8 +66,63 @@
       </button>
     </section>
 
-    <!-- ============ EXPERIENCE ============ -->
-    <section id="work" class="section reveal">
+    <!-- ============ SECTION 2: ABOUT ============ -->
+    <section id="about" class="section reveal">
+      <div class="tag">ABOUT</div>
+      <p class="lede">A bit more about me and what I bring to the table.</p>
+
+      <div class="about-grid">
+        <div class="about-text">
+          <p>
+            I'm a final-year B.Tech Information Technology student who
+            treats the internet as a playground for building things. My work
+            spans full-stack web development, machine learning, and UI/UX
+            design, with hands-on experience shipping everything from
+            responsive landing pages to CNN-based diagnostic models.
+          </p>
+          <p>
+            Outside of code, I consider myself a bit of a polymath — I'm
+            equally drawn to economics, productivity systems, and memory
+            techniques as I am to neural networks. I like understanding how
+            things work well enough to rebuild them, whether that's a web app,
+            a game, or a personal knowledge system.
+          </p>
+        </div>
+
+        <div class="about-skills">
+          <div class="skill-bars">
+            <!-- Duplicate a .skill-bar block to add another skill -->
+            <div class="skill-bar">
+              <div class="skill-bar-head"><span>Python</span><span>90%</span></div>
+              <div class="skill-bar-track"><div class="skill-bar-fill" data-fill="90"></div></div>
+            </div>
+            <div class="skill-bar">
+              <div class="skill-bar-head"><span>JavaScript</span><span>85%</span></div>
+              <div class="skill-bar-track"><div class="skill-bar-fill" data-fill="85"></div></div>
+            </div>
+            <div class="skill-bar">
+              <div class="skill-bar-head"><span>Machine Learning</span><span>88%</span></div>
+              <div class="skill-bar-track"><div class="skill-bar-fill" data-fill="88"></div></div>
+            </div>
+            <div class="skill-bar">
+              <div class="skill-bar-head"><span>HTML / CSS</span><span>92%</span></div>
+              <div class="skill-bar-track"><div class="skill-bar-fill" data-fill="92"></div></div>
+            </div>
+            <div class="skill-bar">
+              <div class="skill-bar-head"><span>UI / UX Design</span><span>80%</span></div>
+              <div class="skill-bar-track"><div class="skill-bar-fill" data-fill="80"></div></div>
+            </div>
+            <div class="skill-bar">
+              <div class="skill-bar-head"><span>TensorFlow</span><span>82%</span></div>
+              <div class="skill-bar-track"><div class="skill-bar-fill" data-fill="82"></div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ SECTION 3: EXPERIENCE ============ -->
+    <section id="experience" class="section reveal">
       <div class="tag">EXPERIENCE</div>
       <p class="lede">Throughout my career, I've worked on a lot of projects. Here's a brief overview.</p>
 
@@ -91,57 +154,15 @@
       </div>
     </section>
 
-    <!-- ============ STUFF I DO ============ -->
-    <section class="section reveal">
-      <div class="tag">STUFF I DO</div>
-      <p class="stuff">Web Apps, ML Models, Landing Pages, Desktop GUIs, UI/UX Design, Research, And More.</p>
-    </section>
-
-    <!-- ============ PROJECTS / VENTURES ============ -->
-    <section class="section reveal">
-      <div class="tag">STACK</div>
-      <p class="lede">Ventures</p>
-
-      <div class="stack-list">
-        <!-- Duplicate an <a class="stack-card"> to add another project -->
-        <a class="stack-card" href="#">
-          <span class="stack-glow"></span>
-          <div class="stack-badge">RE</div>
-          <div class="stack-body">
-            <div class="stack-title">Automated Multi-Class Skin Disease Detection <span class="arr">↗</span></div>
-            <p class="stack-desc">Deep learning framework classifying 7 categories of skin lesions from the HAM10000 dataset — 89% accuracy, 99% melanoma recall.</p>
-          </div>
-        </a>
-
-        <a class="stack-card" href="#">
-          <span class="stack-glow"></span>
-          <div class="stack-badge">ML</div>
-          <div class="stack-body">
-            <div class="stack-title">CNN Based Diabetic Foot Ulcer Detection <span class="arr">↗</span></div>
-            <p class="stack-desc">CNN model detecting diabetic foot ulcers from medical images at 95% classification accuracy.</p>
-          </div>
-        </a>
-
-        <a class="stack-card" href="#">
-          <span class="stack-glow"></span>
-          <div class="stack-badge">AI</div>
-          <div class="stack-body">
-            <div class="stack-title">Desktop Voice Assistant <span class="arr">↗</span></div>
-            <p class="stack-desc">Desktop assistant with voice/text commands, TTS, speech recognition, SQLite, and OpenAI-powered NLP.</p>
-          </div>
-        </a>
-      </div>
-    </section>
-
-    <!-- ============ TECH STACK ============ -->
-    <section class="section reveal">
-      <div class="tag">TECH STACK</div>
+    <!-- ============ SECTION 4: SKILLS (moved from Tech Stack) ============ -->
+    <section id="skills" class="section reveal">
+      <div class="tag">SKILLS</div>
       <p class="lede">Tools & technologies I build with.</p>
 
       <div class="tech-grid">
         <!-- Duplicate a .tech-icon block to add another tool. Icons via cdn.simpleicons.org/<slug>/<hexcolor> -->
         <div class="tech-icon" title="HTML5"><img src="https://cdn.simpleicons.org/html5/E34F26" alt="HTML5" /></div>
-        <div class="tech-icon" title="CSS3"><img src="https://cdn.simpleicons.org/css3/1572B6" alt="CSS3" /></div>
+        <div class="tech-icon" title="CSS3"><img src="https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/css3.svg" alt="CSS3" style="filter: invert(12%) sepia(97%) saturate(5887%) hue-rotate(198deg) brightness(93%) contrast(101%);" /></div>
         <div class="tech-icon" title="JavaScript"><img src="https://cdn.simpleicons.org/javascript/F7DF1E" alt="JavaScript" /></div>
         <div class="tech-icon" title="Python"><img src="https://cdn.simpleicons.org/python/3776AB" alt="Python" /></div>
         <div class="tech-icon" title="TensorFlow"><img src="https://cdn.simpleicons.org/tensorflow/FF6F00" alt="TensorFlow" /></div>
@@ -152,10 +173,65 @@
       </div>
     </section>
 
-    <!-- ============ PUBLICATION ============ -->
-    <section class="section reveal">
+    <!-- ============ SECTION 5: PROJECTS (renamed from Stack/Ventures) ============ -->
+    <section id="projects" class="section reveal">
+      <div class="tag">PROJECTS</div>
+      <p class="lede">Things I've built, from research to shipped products.</p>
+
+      <div class="stack-list">
+        <!-- Duplicate an <a class="stack-card"> to add another project -->
+        <a class="stack-card" href="#">
+          <span class="stack-glow"></span>
+          <div class="stack-badge">RE</div>
+          <div class="stack-body">
+            <div class="stack-title">Automated Multi-Class Skin Disease Detection <span class="arr">↗</span></div>
+            <p class="stack-desc">Deep learning framework classifying 7 categories of skin lesions from the HAM10000 dataset — 89% accuracy, 99% melanoma recall.</p>
+            <div class="stack-tags">
+              <span class="stack-tag">Python</span>
+              <span class="stack-tag">TensorFlow</span>
+              <span class="stack-tag">CNN</span>
+            </div>
+          </div>
+        </a>
+
+        <a class="stack-card" href="#">
+          <span class="stack-glow"></span>
+          <div class="stack-badge">ML</div>
+          <div class="stack-body">
+            <div class="stack-title">CNN Based Diabetic Foot Ulcer Detection <span class="arr">↗</span></div>
+            <p class="stack-desc">CNN model detecting diabetic foot ulcers from medical images at 95% classification accuracy.</p>
+            <div class="stack-tags">
+              <span class="stack-tag">Python</span>
+              <span class="stack-tag">Deep Learning</span>
+              <span class="stack-tag">Computer Vision</span>
+            </div>
+          </div>
+        </a>
+
+        <a class="stack-card" href="#">
+          <span class="stack-glow"></span>
+          <div class="stack-badge">AI</div>
+          <div class="stack-body">
+            <div class="stack-title">Desktop Voice Assistant <span class="arr">↗</span></div>
+            <p class="stack-desc">Desktop assistant with voice/text commands, TTS, speech recognition, SQLite, and OpenAI-powered NLP.</p>
+            <div class="stack-tags">
+              <span class="stack-tag">Python</span>
+              <span class="stack-tag">SQLite</span>
+              <span class="stack-tag">NLP</span>
+            </div>
+          </div>
+        </a>
+      </div>
+
+      <div class="section-cta-wrap">
+        <a class="section-cta" href="https://github.com/Joshinx17" target="_blank" rel="noreferrer">View more on GitHub <span class="arr">↗</span></a>
+      </div>
+    </section>
+
+    <!-- ============ SECTION 6: PUBLICATION ============ -->
+    <section id="publication" class="section reveal">
       <div class="tag">PUBLICATION</div>
-      <p class="lede">Peer-reviewed research.</p>
+      <p class="lede">Peer-reviewed research. Click through to read it on IEEE Xplore.</p>
       <a class="pub-card" href="https://ieeexplore.ieee.org/document/11465623/" target="_blank" rel="noreferrer">
         <div class="pub-glow"></div>
         <div class="pub-title">A Deep Learning Framework for Automated Multi-Class Skin Disease Detection Using Dermoscopic Images <span class="arr">↗</span></div>
@@ -168,9 +244,9 @@
       </a>
     </section>
 
-    <!-- ============ WRITING ============ -->
-    <section id="writing" class="section reveal">
-      <div class="tag">WRITING</div>
+    <!-- ============ SECTION 7: BLOGS (renamed from Writing) ============ -->
+    <section id="blogs" class="section reveal">
+      <div class="tag">BLOGS</div>
       <div class="write-list">
         <a class="write-item" href="https://medium.com/@joshinwrites/using-parkinsons-law-to-master-computer-science-engineering-da9664ff11c6" target="_blank" rel="noreferrer">
           <span class="write-date">30/12/25</span>
@@ -188,24 +264,13 @@
           <span class="write-len">5 m</span>
         </a>
       </div>
-    </section>
 
-    <!-- ============ PERSONAL ============ -->
-    <section class="section reveal">
-      <div class="tag">PERSONAL</div>
-      <p class="lede">
-        In my spare time, I enjoy reading research papers, tinkering with side
-        projects, and exploring new ML architectures. Also a fan of clean UI,
-        good coffee, and long walks that turn into debugging sessions.
-      </p>
-      <div class="photo-grid">
-        <!-- Swap these images by replacing files in /assets -->
-        <div class="photo"><img src="assets/personal-1.jpg" alt="Code editor" /></div>
-        <div class="photo"><img src="assets/personal-2.jpg" alt="Desk setup" /></div>
+      <div class="section-cta-wrap">
+        <a class="section-cta" href="https://medium.com/@joshinwrites" target="_blank" rel="noreferrer">Read more on Medium <span class="arr">↗</span></a>
       </div>
     </section>
 
-    <!-- ============ CONTACT ============ -->
+    <!-- ============ SECTION 8: CONTACT ============ -->
     <section id="contact" class="section reveal">
       <div class="tag">CONTACT</div>
       <p class="lede">fastest way is to email me. keep it short, don't write me an essay.</p>
